@@ -22,10 +22,11 @@ class App extends Component {
   };
 
   handleReset = () => {
-    this.state.counters.map(c => {
+    const counters = this.state.counters.map(c => {
       c.value = 0;
       return c;
     });
+    this.setState({ counters });
   };
 
   handleDelete = counterId => {
